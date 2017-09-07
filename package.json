@@ -1,0 +1,23 @@
+{
+  "name": "project_codesnippetorganizer",
+  "version": "1.0.0",
+  "description": "Weekly Project: Code Snippet Organizer Code Snippet Organizer Build an organizer for holding your and others' code snippets.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "express-session": "^1.15.5",
+    "jest": "^21.0.1",
+    "mongoose": "^4.10.8",
+    "morgan": "^1.8.2",
+    "mustache-express": "^1.2.5",
+    "supertest": "^3.0.0"
+  }
+}
