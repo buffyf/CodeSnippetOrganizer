@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+
+    <div class="wrapper-signup">
+        <div class="form">
+            <h1>Log in</h1>
+            <form action="/auth/login" method="POST">
+                {{#errors}}
+                <h4>{{.}}</h4>
+                {{/errors}}
+                <label for=""></label><input type="text" name="username" placeholder="Username" required><br>
+                <label for=""></label><input type="password" name="password" placeholder="password1234" required><br><br>
+                <button class="login-btn" type="Submit">Submit</button>
+            </form>
+            <br>
+            <a href="/auth/signup">Don't have an account? Sign up</a>
+        </div>
+    </div>
+</body>
+
+</html>

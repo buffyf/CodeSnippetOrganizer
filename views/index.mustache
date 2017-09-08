@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Code Snippets Index</title>
+</head>
+
+<body>
+    <nav>
+        <a href="/">All Snippets</a>
+        <a href="/auth/login">Login</a>
+        <a href="/auth/signup">Sign Up</a>
+        <a href="/auth/logout">Logout</a>
+    </nav>
+    <h1> Code Snippets!</h1>
+    <div>
+        <form action="/auth/createNew" method="POST">
+            <input type="text" name="title" placeholder="title" autocomplete="off" required><br>
+            <label>Language</label><br>
+            <select type="select" name="language" placeholder="language" autocomplete="off">
+                <option value="CSS">CSS</option>
+                <option value="HTML">HTML</option>
+                <option value="Javascript/JSON">JavaScript/JSON</option>
+                <option value="SQL">SQL</option>
+                <option value="Ruby">Ruby</option>
+            </select><br>
+            <textarea rows="5" cols="50" name="body" placeholder="body" autocomplete="off"></textarea><br>
+            <textarea rows="2" cols="30" name="notes" placeholder="notes" autocomplete="off"></textarea><br>
+            <input type="text" name="tag" placeholder="Tag 1">
+            <input type="text" name="tag" placeholder="Tag 2">
+            <input type="text" name="tag" placeholder="Tag 3">
+
+            <button type="Submit">Create Snippet!</button>
+
+        </form>
+
+    </div>
+
+
+    {{#codeSnippetOrganizer}}
+    <div class="entry-styles">
+        <a href="/codeSnippet/{{_id}}">
+            <h1>{{title}}</h1>
+        </a>
+        <p>Notes: {{notes}}</p>
+        <p>language{{language}}</p>
+
+        <p>Tag:{{tag}}</p>
+
+        <p>Body: {{body}}</p>
+
+    </div>
+    <br> {{/codeSnippetOrganizer}}
+
+
+
+
+</body>
+
+</html>
