@@ -13,7 +13,7 @@ const snippetSchema = new Schema({
     language: {
         type: String,
         required: true,
-        enum: ["CSS", "HTML", "JavaScript/JSON", "SQL", "Ruby"]
+        enum: ["CSS", "HTML", "JavaScript", "SQL", "Ruby"]
     },
     tag: {
         type: Array,

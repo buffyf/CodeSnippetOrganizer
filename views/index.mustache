@@ -18,13 +18,13 @@
     </nav>
     <h1> Code Snippets!</h1>
     <div>
-        <form action="/auth/createNew" method="POST">
+        <form action="/createNew" method="POST">
             <input type="text" name="title" placeholder="title" autocomplete="off" required><br>
             <label>Language</label><br>
             <select type="select" name="language" placeholder="language" autocomplete="off">
                 <option value="CSS">CSS</option>
                 <option value="HTML">HTML</option>
-                <option value="Javascript/JSON">JavaScript/JSON</option>
+                <option value="JavaScript">JavaScript</option>
                 <option value="SQL">SQL</option>
                 <option value="Ruby">Ruby</option>
             </select><br>
@@ -40,9 +40,25 @@
 
     </div>
 
+    <div>
+        <h1>Search By:</h1>
+        <form action="/language" method="POST">
+            <label>Select Language</label><br>
+            <select type="select" name="language" placeholder="language" autocomplete="off">
+                <option value="CSS">CSS</option>
+                <option value="HTML">HTML</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="SQL">SQL</option>
+                <option value="Ruby">Ruby</option>
+            </select><br>
+            <input type="text" name="tag" placeholder="Search Tags">
+            <button type="Submit">Search by language</button>
+        </form>
+    </div>
 
-    {{#codeSnippetOrganizer}}
-    <div class="entry-styles">
+
+    {{#snippets}}
+    <div>
         <a href="/codeSnippet/{{_id}}">
             <h1>{{title}}</h1>
         </a>
@@ -54,7 +70,7 @@
         <p>Body: {{body}}</p>
 
     </div>
-    <br> {{/codeSnippetOrganizer}}
+    <br> {{/snippets}}
 
 
 
