@@ -60,12 +60,25 @@ indexRoutes.get("/:trashroute", (req, res) => {
 });
 
 
-//////search by tagno
+
 
 
 
 ////view the snippet 
+/////to view a snippet
+indexRoutes.get("/codeSnippet/:id", function (req, res) {
+    Snippet.findById(req.params.id)
+        .then(function (foundSnippet) {
+            if (!foundSnippet) {
+                return res.send({ msg: "No snippet found" });
+            }
+            res.render("snippetDetail", { snippets: foundSnippet });
+        })
+        .catch(function (err) {
+            res.status(500).send(err);
+        });
 
+});
 
 
 module.exports = indexRoutes;  

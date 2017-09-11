@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Code Snippets</title>
+</head>
+
+<body>
+    <nav>
+        <a href="/">All Snippets</a>
+        <a href="/auth/login">Login</a>
+        <a href="/auth/signup">Sign Up</a>
+        <a href="/auth/logout">Logout</a>
+    </nav>
+
+    <h1> This Individual Snippet page</h1>
+
+
+
+
+    {{#snippets}}
+    <div>
+
+        <h1>{{title}}</h1>
+        </a>
+        <p>Notes: {{notes}}</p>
+        <p>language: {{language}}</p>
+        <p>Tag:{{tag}}</p>
+        <p>Body: {{body}}</p>
+    </div>
+    {{/snippets}}
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
